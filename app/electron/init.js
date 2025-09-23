@@ -1,9 +1,10 @@
 'use strict';
-
+const os = require('os');
 const path = require('path');
 const { app } = require('electron');
 app.setName('Achievement Watcher');
 app.setPath('userData', path.join(app.getPath('appData'), app.getName()));
+process.env['APPDATA'] = path.join(os.homedir(), 'Library', 'Application Support');
 const CHROMIUM_REVISION = '1108766';
 const { BrowserWindow, dialog, session, shell, ipcMain, globalShortcut } = require('electron');
 const { autoUpdater } = require('electron-updater');
@@ -1488,7 +1489,6 @@ async function createNotificationWindow(info) {
         scale,
       });
       createOverlayWindow({ appid: info.appid, action: 'refresh' });
-      player.play(soundFile);
     });
 
     notificationWindow.on('closed', async () => {

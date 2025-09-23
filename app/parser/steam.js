@@ -41,19 +41,19 @@ module.exports.initDebug = ({ isDev, userDataPath }) => {
 module.exports.scan = async (additionalSearch = []) => {
   try {
     let search = [
-      path.join(process.env['Public'], 'Documents/Steam/CODEX'),
-      path.join(process.env['Public'], 'Documents/Steam/RUNE'),
-      path.join(process.env['Public'], 'Documents/OnlineFix'),
-      path.join(process.env['Public'], 'Documents/EMPRESS'),
+      //path.join(process.env['Public'], 'Documents/Steam/CODEX'),
+      //path.join(process.env['Public'], 'Documents/Steam/RUNE'),
+      //path.join(process.env['Public'], 'Documents/OnlineFix'),
+      //path.join(process.env['Public'], 'Documents/EMPRESS'),
       path.join(process.env['APPDATA'], 'Goldberg SteamEmu Saves'),
       path.join(process.env['APPDATA'], 'GSE Saves'),
       path.join(process.env['APPDATA'], 'EMPRESS'),
       path.join(process.env['APPDATA'], 'Steam/CODEX'),
       path.join(process.env['APPDATA'], 'SmartSteamEmu'),
       path.join(process.env['APPDATA'], 'CreamAPI'),
-      path.join(process.env['PROGRAMDATA'], 'Steam') + '/*',
-      path.join(process.env['LOCALAPPDATA'], 'SKIDROW'),
-      path.join(process.env['LOCALAPPDATA'], 'anadius/LSX emu/achievement_watcher'),
+      //path.join(process.env['PROGRAMDATA'], 'Steam') + '/*',
+      //path.join(process.env['LOCALAPPDATA'], 'SKIDROW'),
+      //path.join(process.env['LOCALAPPDATA'], 'anadius/LSX emu/achievement_watcher'),
     ];
 
     const mydocs = readRegistryStringAndExpand('HKCU', 'Software/Microsoft/Windows/CurrentVersion/Explorer/User Shell Folders', 'Personal');
